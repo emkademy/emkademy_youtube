@@ -1,7 +1,7 @@
 import cv2
 
 
-foto = cv2.imread("./1.png")
+foto = cv2.imread("./foto.png")
 
 # Dogru cizme:
 # cv2.line(foto, baslangic_koordinatlari, bitis_koordinatlari, renk, kalinlik)
