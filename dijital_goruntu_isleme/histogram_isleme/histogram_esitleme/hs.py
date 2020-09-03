@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-def figurden_fotografa(fig, dpi=180):
+def from_figure_to_image(fig, dpi=180):
     buf = io.BytesIO()
     fig.savefig(buf, format="png", dpi=dpi)
     buf.seek(0)
@@ -20,7 +20,7 @@ def get_histogram_image(img, L):
     fig = plt.figure()
     ax = fig.add_subplot()
     ax.hist(img, density=True, range=(0, L))
-    hist_image = figurden_fotografa(fig).mean(axis=2)
+    hist_image = from_figure_to_image(fig).mean(axis=2)
     hist_image = cv2.resize(hist_image, img.shape)
     fig.clf()
     plt.close(fig)
