@@ -1,5 +1,6 @@
 .ipynb_checkpoints/
 __pycache__/
 fotograflar/
-.*.swp
 before/
+modeller/
+.*.swp
